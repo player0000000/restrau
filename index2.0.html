@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset = "UTF-8" />
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style (index).css">
+	<link href="https://fonts.googleapis.com/css2?family=Playball&family=Shalimar&display=swap" rel="stylesheet">
+	<title>user login</title>
+</head>
+<style>
+#navbar{
+    display: flex;
+    align-items: center;
+	font-family:  'Playball', cursive;
+}
+#navbar{
+    position: relative;
+}
+#logo{
+    margin: 10px 34px;
+}
+#logo img{
+    height: 59px;
+    margin: 3px 6px;
+	margin-right: 20px;
+}
+#navbar ul{
+    display: flex;
+    font-family: 'Playball', cursive;
+    list-style-type: none;
+}
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: 100%;
+    width:100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+#navbar ul{
+  font-size: 30px;
+}
+#navbar ul li a{
+
+    color: white;
+    display: absolute;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+
+}
+</style>
+<body>
+	<nav id="navbar">
+        <div id="logo">
+            <img src="logo3.jpeg" alt ="KhanaKhazana.com">
+        </div>
+        <ul> 
+            <li class="item"><a href="home.html">Home</a></li>
+            <li class="item"><a href="menu.html">Menu</a></li>
+            <li class="item"><a href="contact us.html">Contact Us</a></li>
+            <li class="item"><a href="menu.html">About Us</a></li>
+        </ul>
+    </nav>
+
+	<div class="align">
+		<div class="logo">USER <p>LOGIN</p></div>
+		<div class="card">
+			<div class="head">
+				<div></div>
+				<a id="login" class="selected" href="#login">Login</a>
+
+				<div></div>
+			</div>
+			<div class="tabs">
+				<form>
+					<div class="inputs">
+						<div class="input">
+							<input placeholder="Username" id="txtPassportNumber" type="text" onkeyup="EnableDisable(this)" required>
+						</div>
+						<div class="input">
+							<input placeholder="Password" type="password" id="txtPassportNumber" onkeyup="EnableDisable(this)" required>
+						</div>
+						<label class="checkbox">
+							<input type="checkbox">
+							<span>Remember me</span>
+					</label>
+					</div>
+					<input id="btnSubmit" type="button" value="Login" disabled="disabled" onclick="location.href='menu.html'"/>
+				</form>
+
+				
+			</div>
+		</div>
+	</div>
+    <script type="text/javascript">
+        function EnableDisable(txtPassportNumber) {
+            //Reference the Button.
+            var btnSubmit = document.getElementById("btnSubmit");
+    
+            //Verify the TextBox value.
+            if (txtPassportNumber.value.trim() != "") {
+                //Enable the TextBox when TextBox has value.
+                btnSubmit.disabled = false;
+            } else {
+                //Disable the TextBox when TextBox is empty.
+                btnSubmit.disabled = true;
+            }
+        };
+    </script>
+</body>
+</html>
